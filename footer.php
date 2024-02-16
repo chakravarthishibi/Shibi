@@ -16,7 +16,7 @@
 <div class="span12" id= "footer" style="text-align:center;position: fixed">
 <?php echo COPYRIGHT; ?>
 	<!--&copy;&nbsp;Copyright 2008
-	<!--script type="text/javascript">
+	<script type="text/javascript">
 		copyright = new Date();
 		update = copyright.getFullYear();
 		document.write(" - " + update);
@@ -50,14 +50,14 @@ for($i = 2; $i<=$count_sx ;++$i)
 	$res_url = substr($res, 0, strrpos($res, "/"));
 }
 
-//$count = 0;
-//echo $res_url;
-// $utility = new UtilityConfigDAO();
-// $count = $utility->getURLByModulesCheck($res_url);
-// if($count <= 0)
-// {
-// 	header("Location:noaccess");
-// }
+$count = 0;
+echo $res_url;
+$utility = new UtilityConfigDAO();
+$count = $utility->getURLByModulesCheck($res_url);
+if($count <= 0)
+{
+	header("Location:noaccess");
+}
 
 ?>
 
